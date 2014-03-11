@@ -1,0 +1,254 @@
+/* https://www.google.com/fonts/specimen/Raleway */
+/* https://www.google.com/fonts#UsePlace:use/Collection:Raleway */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Raleway Thin'), local('Raleway-Thin'), url(font/raleway-100-thin.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 200;
+  src: local('Raleway ExtraLight'), local('Raleway-ExtraLight'), url(font/raleway-200-extralight.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Raleway Light'), local('Raleway-Light'), url(font/raleway-300-light.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Raleway'), url(font/raleway-400-normal.ttf) format('truetype');
+}
+
+/* https://www.google.com/fonts/specimen/Roboto */
+/* https://www.google.com/fonts#UsePlace:use/Collection:Roboto */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'), url(font/roboto-light.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Roboto Light Italic'), local('Roboto-LightItalic'), url(font/roboto-lightitalic.ttf) format('truetype');
+}
+
+/*****************************************************************************/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    background: black;
+    /* background: url(baseline-screen.png); */
+    color: grey;
+    font-family: 'Roboto';
+    font-size: 22px;               /* size      */
+    font-weight: 300;
+    line-height: 32px;             /* line-height   */
+}
+noscript {
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+}
+    noscript span {
+        background: #ff8;
+        border-radius: 5px;
+        color: #000;
+        font-family: 'Raleway';
+        font-weight: 400;
+        padding: 8px 32px;
+        text-align: center;
+    }
+article {
+    padding: 32px;                 /* line-height */
+    padding-top: 0;
+    margin: 0 auto;
+    max-width: 960px;              /* 30 line-height (30-35em is ideal; ~60char) */
+    text-align: justify;
+}
+h1 {
+    text-align: left;
+    position: relative;
+    margin: 0;
+}
+article > h1 {
+    color: #33B5E5;                /* .bright */
+    font-size: 70px;
+    font-family: 'Raleway';
+    font-weight: 100;
+    line-height: 96px; /* 32 x 3 */
+    margin-bottom: 32px; /* 32 */
+    top: 15px;
+}
+section > h1 {
+    color: white;                  /* white */
+    font-size: 36px;
+    font-family: 'Raleway';
+    font-weight: 200;
+    line-height: 64px; /* 32 x 2 */
+    top: 11px;
+}
+p { margin: 0 }
+p + p { text-indent: 32px }       /* 32 */
+dt {
+    color: white;
+    font-family: 'Raleway';
+    text-align: left;
+}
+dd {
+    color: grey;
+    margin: 0 32px;         /* 0 / 1.5 line-height / 0 / line-height */
+    text-align: left;
+}
+time {
+    float: right;
+    padding-left: 48px;            /* 1.5 line-height */
+}
+
+b {
+    color: #33B5E5;                /* .bright */
+    font-weight: inherit;
+}
+
+a {
+    color: #33B5E5;                /* .bright */
+    text-decoration: none;
+}
+a:hover {
+    color: #33B5E5;                /* .bright */
+    text-decoration: underline;
+}
+a:visited, a:active {
+    color: #0099CC;                /* .muted */
+}
+
+figure.me {
+    float: right;
+    font-family: 'Raleway';
+    margin: 0;
+    margin-top: 16px;
+    padding: 48px 32px 0 48px; /*  1.5 line-height / line-height / line-height / 1.5 line-height */
+}
+    /* Fix for print: To make image an even number of line-heights when printing,
+       image is made to fill out its container (which vertically sized by
+       <br>s, inside it). Only 'width' is explicitly set with CSS. */
+
+    /* Image height/width ratio is 5/4. */
+    figure.me div.img {
+        /* height: 352px; */      /* 11 line-height = image-height */
+        display: block;
+        position: relative;
+        top: -8px;
+        width: 282px;             /*  .8 image-height */
+    }
+    figure.me div.img img { position: absolute; height: 100%; width: 100% }
+    figure.me figcaption {
+        color: white;
+        text-align: right;
+    }
+        figure.me figcaption div { margin: 16px 0 }                /* 0.5 line-height */
+
+q { quotes: "”" "”"; }
+
+footer {
+    color: #0099CC;
+    margin: 32px;                 /* 32 */
+    text-align: center;
+}
+
+/*****************************************************************************/
+
+.bright { color: #33B5E5 }
+.muted { color: #0099CC }
+.hide {
+    display: none;
+}
+
+/*****************************************************************************/
+
+@media print {
+    @page {
+        /* top margin is 28pt, not counting that specified here */
+        margin: 25mm 25mm 25mm 25mm;
+    }
+    * {
+        background: transparent !important;
+        color: #000 !important;
+    }
+    html {
+        /* background: url(baseline-print.png) !important; */
+        font-size: 11pt;               /* font-size      */
+        line-height: 16pt;             /* line-height   */
+    }
+    noscript, footer { display: none }
+    article {
+        padding: 0;
+        max-width: none;
+        /* max-width: 30em; /\* EXPERIMENT *\/ */
+    }
+    h1, dt {
+        break-after: avoid;
+        page-break-inside: avoid;
+        page-break-after: avoid;
+    }
+    dd {
+        page-break-before: avoid;
+        text-align: inherit;
+    }
+    article > h1 {
+        font-size: 24pt;
+        font-weight: 200;       /* +100 boldness */
+        line-height: 48pt;      /* 3 line-height */
+        margin: 0;
+        top: 11pt;
+    }
+    section > h1 {
+        top: 6pt;
+        font-size: 16pt;
+        font-weight: 300;       /* +100 boldness */
+        line-height: 32pt;      /* 2 line-height */
+    }
+    p + p { text-indent: 16pt } /* line-height */
+    dt {
+        color: #000 !important;
+        font-weight: 400;       /* +100 boldness */
+    }
+    dd {
+        margin: 0 24pt 0 16pt;         /* 0 / 1.5 line-height / 0 / line-height */
+    }
+    time {
+        padding-left: 24pt;         /* 1.5 line-height */
+    }
+    figure.me {
+        font-weight: 400;
+        margin-top: 8pt;
+        padding: 24pt 24pt 0 24pt; /*  line-height / line-height / 0 / line-height */
+    }
+        figure.me div.img {
+            width: 141pt;             /* ½ image-width (on screen) */
+        }
+        figure.me figcaption {
+            position: relative;
+            top: -8pt;
+        }
+        figure.me figcaption div {
+            margin: 8pt 0;        /* 0.5 line-height */
+        }
+}
+
+/* eof */
