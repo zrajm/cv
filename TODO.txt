@@ -1,0 +1,12 @@
+-*- org -*-
+
+* TODO TeX-ier hyphenation
+* TODO CSS text-align: left, Javascript enables text-align: justified
+  Text should be jagged right, except Javascript is enabled, in which case
+  justified text is ok.
+* TODO CSS when lines are too short: 'text-align: left'
+  What's 'too short'?
+* DONE Slightly larger picture?
+  CLOSED: [2014-03-18 Tue 16:49]
+  image-height: 11 line-height
+  image-width: .8 image-height
