@@ -1,5 +1,10 @@
 -*- org -*-
 
+* TODO Find other jobs that aren't included
+* DONE Klingonska radio spot
+  CLOSED: [2026-03-30 Mon 20:24]
+* DONE Klingonska ad posters
+  CLOSED: [2026-04-04 Sat 01:01]
 * TODO TeX-ier hyphenation
 * TODO CSS text-align: left, Javascript enables text-align: justified
   Text should be jagged right, except Javascript is enabled, in which case
@@ -10,3 +15,4 @@
   CLOSED: [2014-03-18 Tue 16:49]
   image-height: 11 line-height
   image-width: .8 image-height
+* [eof]
