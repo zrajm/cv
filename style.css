@@ -52,7 +52,7 @@ html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     background: black;
-    /* background: url(baseline-screen.png); */
+    &.DEBUG { background: url(baseline-screen.png), black }
     color: grey;
     font-family: 'Roboto';
     font-size: 22px;               /* size      */
@@ -142,26 +142,26 @@ figure.me {
     font-family: 'Raleway';
     margin: 0;
     margin-top: 16px;
-    padding: 48px 32px 0 48px; /*  1.5 line-height / line-height / line-height / 1.5 line-height */
-}
-    /* Fix for print: To make image an even number of line-heights when printing,
-       image is made to fill out its container (which vertically sized by
-       <br>s, inside it). Only 'width' is explicitly set with CSS. */
-
-    /* Image height/width ratio is 5/4. */
-    figure.me div.img {
-        /* height: 352px; */      /* 11 line-height = image-height */
+    padding: 32px 32px 0 32px; /*  line-height / line-height / 0 / line-height */
+    max-width: 100%;
+    img {
+        margin-top: 9px; margin-bottom: 41px; /* image top/bottom on baseline */
+        max-width: 100%;
         display: block;
-        position: relative;
-        top: -8px;
-        width: 282px;             /*  .8 image-height */
+        height: unset;
+        /* Set image width, in order to force image <height>. <width> (rather than
+         * <height>) is used in order to allow <max-with> to stop image from
+         * being growing than screen. */
+        width: calc(32px * 11 * (4 / 5)); /* image HEIGHT: 11 × line-height */
+        aspect-ratio: 4/5;
+        object-fit: contain;
     }
-    figure.me div.img img { position: absolute; height: 100%; width: 100% }
-    figure.me figcaption {
+    figcaption {
         color: white;
         text-align: right;
+        div { margin: 16px 0 }                /* 0.5 line-height */
     }
-        figure.me figcaption div { margin: 16px 0 }                /* 0.5 line-height */
+}
 
 q { quotes: "”" "”"; }
 

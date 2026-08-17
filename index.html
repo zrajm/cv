@@ -1,4 +1,4 @@
-<!doctype html><!-- -*- ispell-dictionary: "swedish" -*- -->
+<!DOCTYPE HTML><!-- -*- ispell-dictionary: "swedish" -*- -->
 <html lang=sv>
   <head>
     <meta charset="utf-8">
@@ -9,13 +9,9 @@
     <title>Zrajms CV</title>
   </head>
   <body>
-    <noscript>
-      <span>Enable Javascript for hyphenation.</span>
-    </noscript>
     <article>
       <figure class=me>
-        <!-- 11 <br>s, see comment 'div.img' CSS -->
-        <div class=img><img src="zrajm.jpg"><br><br><br><br><br><br><br><br><br><br><br></div>
+        <img width=1147 height=1434 src="zrajm.jpg">
         <figcaption>
           <div><a href="mailto:jobb@zrajm.org">jobb@zrajm.org</a></div>
           <div>076–211 50 43</div>
@@ -23,7 +19,7 @@
         </figcaption>
       </figure>
 
-      <h1>Zrajm Öqvist</h1>
+      <h1>Zrajm <wbr>Öqvist</h1>
       <!-- <p>Linuxhackare, klingonist -->
 
       <p class=hyphenate>
@@ -321,4 +317,6 @@
     </article>
     <script src="hyphenate.js"></script>
   </body>
+  <script>/\bDEBUG\b/.exec(location)
+    && document.documentElement.classList.add('DEBUG')</script>
 </html>
