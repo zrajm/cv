@@ -128,10 +128,9 @@ a:visited, a:active {
 
 figure.me {
     float: right;
-    font-family: 'Raleway';
     margin: 0;
     margin-top: 16px;
-    padding: 32px 32px 0 32px; /*  line-height / line-height / 0 / line-height */
+    padding: 32px /* line-height */; padding-bottom: 0;
     max-width: 100%;
     & img {
         margin-top: 9px; margin-bottom: 40px; /* image top/bottom on baseline */
@@ -146,6 +145,7 @@ figure.me {
         object-fit: contain;
     }
     & figcaption {
+        font-family: 'Raleway';
         color: #fff;
         text-align: right;
         & div { margin: 16px 0 }  /* 0.5 line-height */
