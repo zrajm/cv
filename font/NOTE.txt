@@ -1,0 +1,57 @@
+Fonts
+=====
+Fonts Raleway and Roboto were originally found via Google Fonts, but can also
+be found on Github.
+
+Included Glyphs
+---------------
+In order to lessen font file size the fonts only include the characters needed,
+i.e. Basic Latin + Latin-1 supplement, and characters for Unicode punctuation
+marks (curly quotes, various dashes etc). We can therefore make do with the
+following Unicode categories:
+
+  + **Basic Latin** (`U+0000–U+007F`) – covers `A-Z`, `a-z`, `0-9`, all
+    punctuation/symbols in your list (`! " & ' ( ) * , - . / : ; < = > ? @ \`),
+    and space.
+  + **Latin-1 Supplement** (`U+0080–U+00FF`) – covers `NBSP` (`U+00A0`), `©`
+    (`U+00A9`), `ÅÄÖåäö` (`U+00C4–U+00F6`), and `é` (`U+00E9`).
+  + **General Punctuation** (`U+2000–U+206F`) – covers `–` (`U+2013`), `—`
+    (`U+2014`), and `’` (`U+2019`).
+
+This does NOT include IPA characters, or 'U+02BC MODIFIER LETTER APOSTROPHE'
+(used for Klingon).
+
+Font reduction was performed using:
+
+```
+for FONT (font/*.woff2) {
+    pyftsubset --unicodes="U+0000-007F,U+0080-00FF,U+2000-206F" \
+        --layout-features='*' \
+        --recalc-bounds \
+        --flavor=woff2 \
+        --output-file=${FONT:t}
+}
+```
+
+The `--recalc-bounds` was used to eliminate an error that showed up on font
+loading in the devel console in Firefox. `--layout-features='*'` preserves any
+ligatures etc. `--flavor` sets the output format.
+
+I got the best result if i ran the above command on the already compressed
+WOFF2 files, rather using TTF as input and WOFF2 as output. (`pyftsubset` can
+be used to convert TTF to WOFF2, but the usual `woff2_compress` seem to do a
+[marginally] better job.)
+
+
+**Raleway**
+
++ https://fonts.google.com/specimen/Raleway
++ https://github.com/impallari/Raleway/
+
+
+**Roboto**
+
++ https://fonts.google.com/specimen/Roboto
++ https://github.com/googlefonts/roboto-3-classic
+
+<!--EOF-->
