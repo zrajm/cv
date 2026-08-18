@@ -90,8 +90,10 @@ h2 {
     font-weight: 200;
     line-height: 64px; /* 32 x 2 */
 }
-p { margin: 0 }
-p + p { text-indent: 32px }       /* 32 */
+p {
+    margin: 0;
+    & + p { text-indent: 32px }   /* 32 */
+}
 dt {
     color: #fff;
     font-family: 'Raleway'; position: relative; top: 1px;
@@ -131,7 +133,7 @@ figure.me {
     margin-top: 16px;
     padding: 32px 32px 0 32px; /*  line-height / line-height / 0 / line-height */
     max-width: 100%;
-    img {
+    & img {
         margin-top: 9px; margin-bottom: 40px; /* image top/bottom on baseline */
         max-width: 100%;
         display: block;
@@ -143,10 +145,10 @@ figure.me {
         aspect-ratio: 4/5;
         object-fit: contain;
     }
-    figcaption {
+    & figcaption {
         color: #fff;
         text-align: right;
-        div { margin: 16px 0 }    /* 0.5 line-height */
+        & div { margin: 16px 0 }  /* 0.5 line-height */
     }
 }
 
@@ -222,17 +224,17 @@ footer {
         font-weight: 400;
         margin-top: 8pt;
         padding: 24pt 24pt 0 24pt; /*  line-height / line-height / 0 / line-height */
-    }
-        figure.me div.img {
+        & div.img {
             width: 141pt;         /* 1/2 image-width (on screen) */
         }
-        figure.me figcaption {
+        & figcaption {
             position: relative;
             top: -8pt;
         }
-        figure.me figcaption div {
+        & figcaption div {
             margin: 8pt 0;        /* 0.5 line-height */
         }
+    }
 }
 
 /*EOF*/
