@@ -64,7 +64,7 @@ html {
     font-weight: 300;
     line-height: 32px;            /* line-height */
 }
-article {
+main {
     padding: 32px;                /* line-height */
     padding-top: 0;
     margin: 0 auto;
@@ -75,7 +75,7 @@ h1 {
     text-align: left;
     margin: 0;
 }
-article > h1 {
+main > h1 {
     color: #3BD;                  /* .bright */
     font-size: 70px;
     font-family: 'Raleway'; position: relative; top: 16px;
@@ -179,8 +179,8 @@ footer {
         font-size: 11pt;          /* font-size */
         line-height: 16pt;        /* line-height */
     }
-    noscript, footer { display: none }
-    article {
+    footer { display: none }
+    main {
         padding: 0;
         max-width: none;
         /* max-width: 30em; /\* EXPERIMENT *\/ */
@@ -194,7 +194,7 @@ footer {
         page-break-before: avoid;
         text-align: inherit;
     }
-    article > h1 {
+    main > h1 {
         font-size: 24pt;
         font-weight: 200;         /* +100 boldness */
         line-height: 48pt;        /* 3 line-height */
