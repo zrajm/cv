@@ -1,5 +1,6 @@
-/* https://www.google.com/fonts/specimen/Raleway */
-/* https://www.google.com/fonts#UsePlace:use/Collection:Raleway */
+/** Fonts **/
+
+/* https://fonts.google.com/Raleway */
 @font-face {
   font-family: 'Raleway';
   font-style: normal;
@@ -25,8 +26,7 @@
   src: local('Raleway'), url(font/raleway-400-normal.ttf) format('truetype');
 }
 
-/* https://www.google.com/fonts/specimen/Roboto */
-/* https://www.google.com/fonts#UsePlace:use/Collection:Roboto */
+/* https://fonts.google.com/specimen/Roboto */
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
@@ -40,9 +40,7 @@
   src: local('Roboto Light Italic'), local('Roboto-LightItalic'), url(font/roboto-lightitalic.ttf) format('truetype');
 }
 
-/*****************************************************************************/
-
-/* mini-reset */
+/** CSS reset **/
 html { box-sizing: border-box }
 *, :before, :after {
   box-sizing: inherit;
@@ -52,6 +50,7 @@ html { box-sizing: border-box }
   max-width: 100%;
 }
 
+/** Page style **/
 html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
@@ -259,4 +258,4 @@ footer {
         }
 }
 
-/* eof */
+/*EOF*/
