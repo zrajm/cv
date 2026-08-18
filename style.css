@@ -54,13 +54,13 @@ html { box-sizing: border-box }
 html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
-    background: black;
+    background: #000;
     &.DEBUG {
         background:
             repeating-linear-gradient(#808e 0 1px, #0000 1px 32px) 0 24px,
             #000;
     }
-    color: grey;
+    color: #888;
     font-family: 'Roboto';
     font-size: 22px;               /* size      */
     font-weight: 300;
@@ -79,7 +79,7 @@ h1 {
     margin: 0;
 }
 article > h1 {
-    color: #33B5E5;                /* .bright */
+    color: #3BD;                /* .bright */
     font-size: 70px;
     font-family: 'Raleway';
     font-weight: 100;
@@ -88,7 +88,7 @@ article > h1 {
     top: 15px;
 }
 section > h1 {
-    color: white;                  /* white */
+    color: #fff;                  /* white */
     font-size: 36px;
     font-family: 'Raleway';
     font-weight: 200;
@@ -98,35 +98,35 @@ section > h1 {
 p { margin: 0 }
 p + p { text-indent: 32px }       /* 32 */
 dt {
-    color: white;
+    color: #fff;
     font-family: 'Raleway';
     text-align: left;
 }
 dd {
-    color: grey;
+    color: #888;
     margin: 0 32px;         /* 0 / 1.5 line-height / 0 / line-height */
     text-align: left;
 }
 time {
     float: right;
-    padding-left: 48px;            /* 1.5 line-height */
+    padding-left: 48px;           /* 1.5 line-height */
 }
 
 b {
-    color: #33B5E5;                /* .bright */
+    color: #3BD;                  /* .bright */
     font-weight: inherit;
 }
 
 a {
-    color: #33B5E5;                /* .bright */
+    color: #3BD;                  /* .bright */
     text-decoration: none;
 }
 a:hover {
-    color: #33B5E5;                /* .bright */
+    color: #3BD;                  /* .bright */
     text-decoration: underline;
 }
 a:visited, a:active {
-    color: #0099CC;                /* .muted */
+    color: #09C;                  /* .muted */
 }
 
 figure.me {
@@ -149,7 +149,7 @@ figure.me {
         object-fit: contain;
     }
     figcaption {
-        color: white;
+        color: #fff;
         text-align: right;
         div { margin: 16px 0 }                /* 0.5 line-height */
     }
@@ -158,15 +158,15 @@ figure.me {
 q { quotes: "”" "”"; }
 
 footer {
-    color: #0099CC;
+    color: #09C;                  /* .muted */
     margin: 32px;                 /* 32 */
     text-align: center;
 }
 
 /*****************************************************************************/
 
-.bright { color: #33B5E5 }
-.muted { color: #0099CC }
+.bright { color: #3BD }
+.muted { color: #09C }
 .hide {
     display: none;
 }
@@ -179,7 +179,7 @@ footer {
         margin: 25mm 25mm 25mm 25mm;
     }
     * {
-        background: transparent !important;
+        background: #0000 !important;
         color: #000 !important;
     }
     html {
