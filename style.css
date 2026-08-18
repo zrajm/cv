@@ -56,7 +56,11 @@ html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     background: black;
-    &.DEBUG { background: url(baseline-screen.png), black }
+    &.DEBUG {
+        background:
+            repeating-linear-gradient(#808e 0 1px, #0000 1px 32px) 0 24px,
+            #000;
+    }
     color: grey;
     font-family: 'Roboto';
     font-size: 22px;               /* size      */
