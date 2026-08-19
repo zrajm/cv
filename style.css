@@ -73,7 +73,6 @@ main {
 }
 h1, h2 {
     text-align: left;
-    margin: 0;
     width: fit-content;
 }
 h1 {
@@ -91,10 +90,7 @@ h2 {
     font-weight: 200;
     line-height: 64px; /* 32 x 2 */
 }
-p {
-    margin: 0;
-    & + p { text-indent: 32px }   /* 32 */
-}
+p + p { text-indent: 32px }       /* 32 */
 dt {
     color: #fff;
     font-family: 'Raleway'; position: relative; top: 1px;
@@ -129,7 +125,6 @@ a:visited, a:active {
 
 figure.me {
     float: right;
-    margin: 0;
     margin-top: 16px;
     padding: 32px /* line-height */; padding-bottom: 0;
     max-width: 100%;
@@ -201,7 +196,6 @@ footer {
         font-size: 24pt;
         font-weight: 200;         /* +100 boldness */
         line-height: 48pt;        /* 3 line-height */
-        margin: 0;
         top: 11pt;
     }
     h2 {
