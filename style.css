@@ -216,7 +216,7 @@ footer {
         font-weight: 400;         /* +100 boldness */
     }
     dd {
-        margin: 0 24pt 0 16pt;    /* 0 / 1.5 line-height / 0 / line-height */
+        margin: 0 16pt;           /* 0 / line-height */
     }
     time {
         padding-left: 24pt;       /* 1.5 line-height */
@@ -225,8 +225,8 @@ footer {
         font-weight: 400;
         margin-top: 8pt;
         padding: 24pt 24pt 0 24pt; /*  line-height / line-height / 0 / line-height */
-        & div.img {
-            width: 141pt;         /* 1/2 image-width (on screen) */
+        & img {
+            width: calc(32px * 8 * (4 / 5)); /* image HEIGHT: 8 × line-height */
         }
         & figcaption {
             position: relative;
