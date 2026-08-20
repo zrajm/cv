@@ -160,6 +160,10 @@ footer {
         /* background: url(baseline-print.png) !important; */
         font-size: 11pt;          /* font-size */
         line-height: 16pt;        /* line-height */
+        background:
+            repeating-linear-gradient(#888 0 1pt, #0000 1pt 16pt) 0 4pt
+            !important;
+
     }
     footer { display: none }
     main {
@@ -180,10 +184,10 @@ footer {
         font-size: 24pt;
         font-weight: 200;         /* +100 boldness */
         line-height: 48pt;        /* 3 line-height */
-        top: 11pt;
+        top: 20.5pt;
     }
     h2 {
-        top: 6pt;
+        top: 7pt;
         font-size: 16pt;
         font-weight: 300;         /* +100 boldness */
         line-height: 32pt;        /* 2 line-height */
