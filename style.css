@@ -64,11 +64,10 @@ html {
     font-weight: 300;
     line-height: 32px;            /* line-height */
 }
+body { padding: 0 16px }          /* 0.5 line-height */
 main {
-    padding: 32px;                /* line-height */
-    padding-top: 0;
     margin: 0 auto;
-    max-width: 960px;             /* 30 line-height (30-35em is ideal; ~60char) */
+    max-width: 896px;             /* 30 line-height (30-35em is ideal; ~60char) */
     text-align: justify;
 }
 h1, h2 {
@@ -103,7 +102,7 @@ dd {
 }
 time {
     float: right;
-    padding-left: 48px;           /* 1.5 line-height */
+    padding-left: 32px;           /* line-height */
 }
 
 b {
@@ -125,11 +124,10 @@ a:visited, a:active {
 
 figure.me {
     float: right;
-    margin-top: 16px;
-    padding: 32px /* line-height */; padding-bottom: 0;
+    margin: 64px 0 32px 32px;
     max-width: 100%;
     & img {
-        margin-top: 9px; margin-bottom: 40px; /* image top/bottom on baseline */
+        position: relative; top: -7px;
         max-width: 100%;
         display: block;
         height: unset;
@@ -141,10 +139,11 @@ figure.me {
         object-fit: contain;
     }
     & figcaption {
-        font-family: 'Raleway';
+        margin-top: 32px;
+        font-family: 'Raleway'; position: relative; top: 1px;
         color: #fff;
         text-align: right;
-        & p { margin: 16px 0 }    /* 0.5 line-height */
+        & p { margin-top: 16px }  /* 0.5 line-height */
     }
 }
 
@@ -190,7 +189,7 @@ footer {
     }
     dd {
         page-break-before: avoid;
-        text-align: inherit;
+        text-align: justify;
     }
     h1 {
         font-size: 24pt;
@@ -213,12 +212,11 @@ footer {
         margin: 0 16pt;           /* 0 / line-height */
     }
     time {
-        padding-left: 24pt;       /* 1.5 line-height */
+        padding-left: 24pt;       /* line-height */
     }
     figure.me {
         font-weight: 400;
-        margin-top: 8pt;
-        padding: 24pt 24pt 0 24pt; /*  line-height / line-height / 0 / line-height */
+        margin: 48pt 0 24pt 24pt; /*  2×line-height / 0 / line-height / line-height */
         & img {
             width: calc(32px * 8 * (4 / 5)); /* image HEIGHT: 8 × line-height */
         }
