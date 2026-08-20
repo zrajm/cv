@@ -74,8 +74,10 @@ h1, h2 {
     text-align: left;
     width: fit-content;
 }
+.white, dt, h2 { color: #fff }
+.bright, a, b, h1 { color: #3BD }
+.muted, a:active, a:visited, footer { color: #09C }
 h1 {
-    color: #3BD;                  /* .bright */
     font-size: 70px;
     font-family: 'Raleway'; position: relative; top: 16px;
     font-weight: 100;
@@ -83,7 +85,6 @@ h1 {
     margin-bottom: 32px; /* 32 */
 }
 h2 {
-    color: #fff;                  /* white */
     font-size: 36px;
     font-family: 'Raleway'; position: relative; top: 12px;
     font-weight: 200;
@@ -91,12 +92,10 @@ h2 {
 }
 p + p { text-indent: 32px }       /* 32 */
 dt {
-    color: #fff;
     font-family: 'Raleway'; position: relative; top: 1px;
     text-align: left;
 }
 dd {
-    color: #888;
     margin: 0 32px;
     text-align: left;
 }
@@ -106,22 +105,15 @@ time {
 }
 
 b {
-    color: #3BD;                  /* .bright */
     font-weight: inherit;
 }
 
 a {
-    color: #3BD;                  /* .bright */
     text-decoration: none;
 }
 a:hover {
-    color: #3BD;                  /* .bright */
     text-decoration: underline;
 }
-a:visited, a:active {
-    color: #09C;                  /* .muted */
-}
-
 figure.me {
     float: right;
     margin: 64px 0 32px 32px;
@@ -141,7 +133,6 @@ figure.me {
     & figcaption {
         margin-top: 32px;
         font-family: 'Raleway'; position: relative; top: 1px;
-        color: #fff;
         text-align: right;
         & p { margin-top: 16px }  /* 0.5 line-height */
     }
@@ -150,15 +141,9 @@ figure.me {
 q { quotes: "”" "”"; }
 
 footer {
-    color: #09C;                  /* .muted */
     margin: 32px;                 /* 32 */
     text-align: center;
 }
-
-/*****************************************************************************/
-
-.bright { color: #3BD }
-.muted { color: #09C }
 
 /*****************************************************************************/
 
