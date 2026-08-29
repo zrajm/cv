@@ -159,10 +159,11 @@ footer {
         /* background: url(baseline-print.png) !important; */
         font-size: 11pt;          /* font-size */
         line-height: 16pt;        /* line-height */
-        background:
-            repeating-linear-gradient(#888 0 1pt, #0000 1pt 16pt) 0 4pt
-            !important;
-
+        &.DEBUG {
+            background:
+                repeating-linear-gradient(#888 0 1pt, #0000 1pt 16pt) 0 4pt
+                !important;
+        }
     }
     footer { display: none }
     main {
