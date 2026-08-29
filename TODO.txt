@@ -1,18 +1,27 @@
 -*- org -*-
 
+* TODO Use CSS variables for 'line-height' & 'font-size'
+  And change these values when printing. (This should eliminate the need for a
+  lot of the 'media @print' styles.)
+* TODO Inline '@media print' wherever needed
+  Instead of using a separate section for all the print styles, they should be
+  inserted straight into whatever element needs them.
+* TODO Use '<img srcset="...">' for hires images where needed
+  A retina display, or when printing should use higher resolution, while
+  cellphones can benefit from a smaller image.
+* TODO Improve font fallbacks
+  This should use a sans font, adjusted to fit into the vertical rhythm (this
+  will be displayed before the actual font is loaded, and so should have the
+  same measurements so elements don't move around on font finishes loading).
+  https://developer.chrome.com/blog/font-fallbacks
 * TODO Find other jobs that aren't included
-* DONE Klingonska radio spot
-  CLOSED: [2026-03-30 Mon 20:24]
-* DONE Klingonska ad posters
-  CLOSED: [2026-04-04 Sat 01:01]
-* TODO TeX-ier hyphenation
-* TODO CSS text-align: left, Javascript enables text-align: justified
-  Text should be jagged right, except Javascript is enabled, in which case
-  justified text is ok.
-* TODO CSS when lines are too short: 'text-align: left'
-  What's 'too short'?
-* DONE Slightly larger picture?
-  CLOSED: [2014-03-18 Tue 16:49]
-  image-height: 11 line-height
-  image-width: .8 image-height
+* FINISHED
+** DONE Klingonska ad posters
+   CLOSED: [2026-04-04 Sat 01:01]
+** DONE Klingonska radio spot
+   CLOSED: [2026-03-30 Mon 20:24]
+** DONE Slightly larger picture?
+   CLOSED: [2014-03-18 Tue 16:49]
+   image-height: 11 line-height
+   image-width: .8 image-height
 * [eof]
