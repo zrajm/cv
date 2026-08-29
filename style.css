@@ -139,9 +139,6 @@ figure.me {
         & p { margin-top: 16px }  /* 0.5 line-height */
     }
 }
-
-q { quotes: "”" "”"; }
-
 footer {
     margin: 32px;                 /* 32 */
     text-align: center;
