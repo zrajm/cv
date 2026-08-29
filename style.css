@@ -1,61 +1,38 @@
-/** Fonts **/
-
 /* https://fonts.google.com/Raleway */
 @font-face {
-  font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 100;
+ font-family: 'Raleway';
   src: local('Raleway Thin'), local('Raleway-Thin'), url(font/raleway-100-thin.woff2);
-  font-display: swap;
+  font-style: normal; font-weight: 100; font-display: swap;
 }
 @font-face {
   font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 200;
   src: local('Raleway ExtraLight'), local('Raleway-ExtraLight'), url(font/raleway-200-extralight.woff2);
-  font-display: swap;
+  font-style: normal; font-weight: 200; font-display: swap;
 }
 @font-face {
   font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 300;
   src: local('Raleway Light'), local('Raleway-Light'), url(font/raleway-300-light.woff2);
-  font-display: swap;
+  font-style: normal; font-weight: 300; font-display: swap;
 }
 @font-face {
   font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 400;
   src: local('Raleway'), url(font/raleway-400-normal.woff2);
-  font-display: swap;
+  font-style: normal; font-weight: 400; font-display: swap;
 }
-
 /* https://fonts.google.com/specimen/Roboto */
 @font-face {
   font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 300;
   src: local('Roboto Light'), local('Roboto-Light'), url(font/roboto-light.woff2);
-  font-display: swap;
+  font-style: normal; font-weight: 300; font-display: swap;
 }
 @font-face {
   font-family: 'Roboto';
-  font-style: italic;
-  font-weight: 300;
   src: local('Roboto Light Italic'), local('Roboto-LightItalic'), url(font/roboto-lightitalic.woff2);
-  font-display: swap;
+  font-style: italic; font-weight: 300; font-display: swap;
 }
-
-/** CSS reset **/
+/* CSS reset */
 html { box-sizing: border-box }
-*, :before, :after {
-  box-sizing: inherit;
-  padding: 0;
-  margin: 0;
-  text-indent: 0;
-  max-width: 100%;
-}
-
+*, :before, :after { box-sizing: inherit; padding: 0; margin: 0; text-indent: 0 }
 /** Page style **/
 html {
     background: #000;
@@ -83,7 +60,7 @@ h1, h2 {
 .white, dt, h2 { color: #fff }
 .bright, a, b, h1 { color: #3BD }
 .muted, a:active, a:visited, footer { color: #09C }
-.hyphenate { hyphens: auto; }
+.hyphenate { hyphens: auto }
 h1 {
     font-size: 70px;
     font-family: 'Raleway'; position: relative; top: 16px;
@@ -110,17 +87,9 @@ time {
     float: right;
     padding-left: 32px;           /* line-height */
 }
-
-b {
-    font-weight: inherit;
-}
-
-a {
-    text-decoration: none;
-}
-a:hover {
-    text-decoration: underline;
-}
+b { font-weight: inherit }
+a { text-decoration: none }
+a:hover { text-decoration: underline }
 figure.me {
     float: right;
     margin: 64px 0 32px 32px;
@@ -143,18 +112,10 @@ footer {
     margin: 32px;                 /* 32 */
     text-align: center;
 }
-
-/*****************************************************************************/
-
+/** Print style **/
 @media print {
-    @page {
-        /* top margin is 28pt, not counting that specified here */
-        margin: 25mm 25mm 25mm 25mm;
-    }
-    * {
-        background: #0000 !important;
-        color: #000 !important;
-    }
+    @page { margin: 25mm 25mm 25mm 25mm }
+    * { background: #0000 !important; color: #000 !important }
     html {
         /* background: url(baseline-print.png) !important; */
         font-size: 11pt;          /* font-size */
@@ -165,12 +126,7 @@ footer {
                 !important;
         }
     }
-    footer { display: none }
-    main {
-        padding: 0;
-        max-width: none;
-        /* max-width: 30em; /\* EXPERIMENT *\/ */
-    }
+    main { max-width: none }
     h1, h2, dt {
         break-after: avoid;
         page-break-inside: avoid;
@@ -193,16 +149,9 @@ footer {
         line-height: 32pt;        /* 2 line-height */
     }
     p + p { text-indent: 16pt }   /* line-height */
-    dt {
-        color: #000 !important;
-        font-weight: 400;         /* +100 boldness */
-    }
-    dd {
-        margin: 0 16pt;           /* 0 / line-height */
-    }
-    time {
-        padding-left: 24pt;       /* line-height */
-    }
+    dt { font-weight: 400 }       /* +100 boldness */
+    dd { margin: 0 16pt }         /* 0 / line-height */
+    time { padding-left: 24pt }   /* line-height */
     figure.me {
         font-weight: 400;
         margin: 48pt 0 24pt 24pt; /*  2×line-height / 0 / line-height / line-height */
@@ -218,5 +167,4 @@ footer {
         }
     }
 }
-
 /*EOF*/
