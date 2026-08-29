@@ -99,7 +99,7 @@ figure.me {
         /* Image height is set to 352 (11 × line-height) in the HTML. */
         max-width: 100%;
         display: block;
-        height: unset;
+        height: auto; /* keep image aspect when scaling down */
     }
     & figcaption {
         margin-top: 32px;
