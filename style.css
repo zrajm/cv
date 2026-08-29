@@ -83,6 +83,7 @@ h1, h2 {
 .white, dt, h2 { color: #fff }
 .bright, a, b, h1 { color: #3BD }
 .muted, a:active, a:visited, footer { color: #09C }
+.hyphenate { hyphens: auto; }
 h1 {
     font-size: 70px;
     font-family: 'Raleway'; position: relative; top: 16px;
