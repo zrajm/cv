@@ -120,15 +120,10 @@ figure.me {
     max-width: 100%;
     & img {
         position: relative; top: -7px;
+        /* Image height is set to 352 (11 × line-height) in the HTML. */
         max-width: 100%;
         display: block;
         height: unset;
-        /* Set image width, in order to force image <height>. <width> (rather than
-         * <height>) is used in order to allow <max-with> to stop image from
-         * being growing than screen. */
-        width: calc(32px * 11 * (4 / 5)); /* image HEIGHT: 11 × line-height */
-        aspect-ratio: 4/5;
-        object-fit: contain;
     }
     & figcaption {
         margin-top: 32px;
