@@ -1,5 +1,60 @@
 -*- org -*-
 
+* [5/11] Implement Anastasiya's requested changes (in Swedish)
+  Ronik Anastasiya <anastasiya.ronik@uppsala.se> requested the following.
+** DONE Ta bort gatuadress                                               :CV:
+   CLOSED: [2026-09-10 Thu 19:50]xxx
+   Information om adress kan du ta bort eftersom detta är något som
+   arbetsgivaren inte behöver. Om du har valt att söka deras tjänst litar dem
+   på att du kan resa dit.
+** DONE Ta bort inledande stycke                                         :CV:
+   CLOSED: [2026-09-10 Thu 19:50]xxx
+   Tänk på att ett CV ska ge arbetsgivaren en kortfattad och lätt överblick av
+   dina kompetenser och erfarenheter. Det kan därför vara fördelaktigt att ta
+   ditt inledande stycke om egenskaper och endast ha med det i ditt personliga
+   brev.
+** DONE Gör layout mer luftig/läsbar                                     :CV:
+   CLOSED: [2026-09-10 Thu 20:30] xxx
+   Du har flera arbetslivserfarenheter och utbildningar. Genom att sätta in
+   ditt CV i en annan mall som genom avstånd eller färger hjälper att skilja
+   arbetena åt, kan du skapa lite mer utrymme i CV:et och göra det lättare att
+   överblicka.
+** DONE Ta bort grundskola                                               :CV:
+   CLOSED: [2026-09-10 Thu 20:31]xxx
+   Du kan ta bort information om grundskola eftersom du nämner dina
+   universitets och gymnasiestudier.
+** DONE Korta ner gymnasiebeskrivning                                    :CV:
+   CLOSED: [2026-09-10 Thu 20:47]
+   På gymnasienivå räcker det att du endast har med inriktningen på studierna.
+*** Gör ett Urval
+**** Bland dina ideella erfarenheter får du prioritera dem erfarenheter som du upplever för dig närmare en tjänst inom den branschen söker. Många gånger kan ideella erfarenheter vara något som du lyfter på intervju om detta blir relevant. Ta därmed bort de erfarenheter som inte är direkt kopplade till arbetsmarknad.
+
+** TODO Korta ner 'Språk- och datorkunskaper'                            :CV:
+   Under rubriken språk- och datorkunskaper kan du sammanfatta en del av
+   informationen genom att lista informationen i punktform. Om arbetsgivaren
+   har frågor kan denne ställa dessa vid intervju. Alternativt om du behåller
+   informationen om språk i ett separat CV som riktar sig för tjänster inom den
+   branschen.
+** TODO Beskriv arbeten/utbildningar/engagemang mer lika                 :CV:
+   Ordna gärna så att beskrivningar för arbeten/ utbildningar/ engagemang är
+   formulerade på liknande sätt. Du kan med fördel göra liknande format som
+   "Konstruktion, författande, formgivning och underhåll av webbsida relaterad
+   till det konstruerade språket klingonska (klingonska.org)."
+** TODO Använd gamla inledande stycke i personliga brevet              :brev:
+** TODO Samma font/layout på personligt brev                           :brev:
+   Du har en bra grund för ditt personliga brev, med återberättande av
+   relevanta erfarenheter. Lägg in texten i ett dokument med samma format och
+   typsnitt som ditt CV.
+** TODO Allmänna råd personligt brev                                   :brev:
+   Tänk på att ett personligt brev ska vara anpassat till just den tjänsten som
+   du söker. För att anpassa ditt personlig brev bör du använda företagets namn
+   tidigt i brevet och sedan kolla på annonsen utefter vad dem skriver att dem
+   söker. Använd gärna annonsens nyckelord där dem kort sammanfattar vilken typ
+   av person dem söker för just det jobbet. Därefter får du gärna koppla hur
+   dina erfarenheter/ egenskaper kan passa in på deras önskemål samtidigt som
+   du beskriver varför du söker jobbet.
+** TODO Skicka in reviderat CV/personligt brev
+   Skicka in CV och personligt brev tillbaka till mig senast 10 september.
 * TODO Use CSS variables for 'line-height' & 'font-size'
   And change these values when printing. (This should eliminate the need for a
   lot of the 'media @print' styles.)
