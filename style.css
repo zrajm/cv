@@ -97,10 +97,8 @@ figure.me {
     }
     & figcaption {
         position: relative; top: 1px;
-        margin-top: 32px;
         font-family: 'Raleway';
         text-align: right;
-        & p { margin-top: 16px }  /* 0.5 line-height */
     }
 }
 footer {
