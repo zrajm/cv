@@ -69,6 +69,7 @@ h2 {
     margin: 32px 0;                 /* line-height */
 }
 p + p { text-indent: 32px }       /* 32 */
+ul { padding-left: 32px }
 dt {
     position: relative; top: 1px;
     font-family: 'Raleway';
@@ -104,7 +105,7 @@ figure.me {
     }
 }
 footer {
-    margin: 64px;                 /* 2 × 32px */
+    margin: 32px;                 /* 2 × 32px */
     text-align: center;
 }
 /** Print style **/

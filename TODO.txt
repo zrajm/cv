@@ -1,6 +1,6 @@
 -*- org -*-
 
-* [5/11] Implement Anastasiya's requested changes (in Swedish)
+* [6/11] Implement Anastasiya's requested changes (in Swedish)
   Ronik Anastasiya <anastasiya.ronik@uppsala.se> requested the following.
 ** DONE Ta bort gatuadress                                               :CV:
    CLOSED: [2026-09-10 Thu 19:50]xxx
@@ -29,7 +29,8 @@
 *** Gör ett Urval
 **** Bland dina ideella erfarenheter får du prioritera dem erfarenheter som du upplever för dig närmare en tjänst inom den branschen söker. Många gånger kan ideella erfarenheter vara något som du lyfter på intervju om detta blir relevant. Ta därmed bort de erfarenheter som inte är direkt kopplade till arbetsmarknad.
 
-** TODO Korta ner 'Språk- och datorkunskaper'                            :CV:
+** DONE Korta ner 'Språk- och datorkunskaper'                            :CV:
+   CLOSED: [2026-09-10 Thu 21:34]
    Under rubriken språk- och datorkunskaper kan du sammanfatta en del av
    informationen genom att lista informationen i punktform. Om arbetsgivaren
    har frågor kan denne ställa dessa vid intervju. Alternativt om du behåller
