@@ -1,6 +1,6 @@
 -*- org -*-
 
-* [6/11] Implement Anastasiya's requested changes (in Swedish)
+* [9/12] Implement Anastasiya's requested changes (in Swedish)
   Ronik Anastasiya <anastasiya.ronik@uppsala.se> requested the following.
 ** DONE Ta bort gatuadress                                               :CV:
    CLOSED: [2026-09-10 Thu 19:50]xxx
@@ -36,16 +36,20 @@
    har frågor kan denne ställa dessa vid intervju. Alternativt om du behåller
    informationen om språk i ett separat CV som riktar sig för tjänster inom den
    branschen.
+** DONE Lägg till ett (utkast till) ett personligt brev                :brev:
+   CLOSED: [2026-09-10 Thu 21:46]
+** DONE Använd gamla inledande stycke i personliga brevet              :brev:
+   CLOSED: [2026-09-10 Thu 21:46]
+** DONE Samma font/layout på personligt brev                           :brev:
+   CLOSED: [2026-09-10 Thu 21:46]
+   Du har en bra grund för ditt personliga brev, med återberättande av
+   relevanta erfarenheter. Lägg in texten i ett dokument med samma format och
+   typsnitt som ditt CV.
 ** TODO Beskriv arbeten/utbildningar/engagemang mer lika                 :CV:
    Ordna gärna så att beskrivningar för arbeten/ utbildningar/ engagemang är
    formulerade på liknande sätt. Du kan med fördel göra liknande format som
    "Konstruktion, författande, formgivning och underhåll av webbsida relaterad
    till det konstruerade språket klingonska (klingonska.org)."
-** TODO Använd gamla inledande stycke i personliga brevet              :brev:
-** TODO Samma font/layout på personligt brev                           :brev:
-   Du har en bra grund för ditt personliga brev, med återberättande av
-   relevanta erfarenheter. Lägg in texten i ett dokument med samma format och
-   typsnitt som ditt CV.
 ** TODO Allmänna råd personligt brev                                   :brev:
    Tänk på att ett personligt brev ska vara anpassat till just den tjänsten som
    du söker. För att anpassa ditt personlig brev bör du använda företagets namn
