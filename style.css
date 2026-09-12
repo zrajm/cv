@@ -1,4 +1,5 @@
 /* https://fonts.google.com/Raleway */
+html { --raleway-ascent:  0.94; --raleway-descent: 0.234 }
 @font-face {
  font-family: 'Raleway';
   src: local('Raleway Thin'), local('Raleway-Thin'), url(font/raleway-100-thin.woff2);
@@ -20,6 +21,7 @@
   font-style: normal; font-weight: 400; font-display: swap;
 }
 /* https://fonts.google.com/specimen/Roboto */
+html { --roboto-ascent:  0.927734375; --roboto-descent: 0.244140625 }
 @font-face {
   font-family: 'Roboto';
   src: local('Roboto Light'), local('Roboto-Light'), url(font/roboto-light.woff2);
@@ -36,15 +38,20 @@ html { box-sizing: border-box }
 /** Page style **/
 html {
     background: #000;
+    --ascent:  var(--roboto-ascent);
+    --descent: var(--roboto-descent);
+    --root-ascent:  var(--roboto-ascent);
+    --root-descent: var(--roboto-descent);
     &.DEBUG {
+        --baseline: calc((1lh + (var(--ascent) - var(--descent)) * 1em) / 2);
         background:
-            linear-gradient(#808e 0 1px, #0000 1px 32px) 0 24px / 100% 32px,
+            linear-gradient(#808e 0 1px, #0000 1px 1lh) 0 var(--baseline) / 100% 1lh,
             #000;
     }
     color: #888;
     font: 300 22px/32px 'Roboto';
 }
-body { padding: 0 16px }          /* 0.5 line-height */
+body { padding: 0 calc(1rlh / 2) }
 main {
     margin: 0 auto;
     max-width: 896px;             /* 30 line-height (30-35em is ideal; ~60char) */
@@ -59,53 +66,82 @@ h1, h2 {
 .muted, a:active, a:visited, footer { color: #09C }
 .hyphenate { hyphens: auto }
 h1 {
-    position: relative; top: 16px;
-    font: 100 70px/96px 'Raleway';  /* 96px = 32 x 3 */
-    margin-bottom: 32px; /* 32 */
+    --this-ascent:  var(--raleway-ascent);
+    --this-descent: var(--raleway-descent);
+    /* FIXME: Too convoluted? */
+    position: relative; top: calc((5rlh
+               + (var(--root-ascent) - var(--root-descent)) * 1rem
+               - 1lh
+               - (var(--this-ascent) - var(--this-descent)) * 1em) / 2);
+    font: 100 70px/calc(3 * 1rlh) 'Raleway';
+    font: 100 calc(3.2 * 1rem)/calc(3 * 1rlh) 'Raleway';
+    margin: 1rlh 0;
 }
 h2 {
-    position: relative; top: 12px;
-    font: 200 36px/64px 'Raleway';  /* 64px = 32 x 2 */
-    margin: 32px 0;                 /* line-height */
+    --this-ascent:  var(--raleway-ascent);
+    --this-descent: var(--raleway-descent);
+    /* FIXME: Too convoluted? */
+    position: relative; top: calc((3rlh
+               + (var(--root-ascent) - var(--root-descent)) * 1rem
+               - 1lh
+               - (var(--this-ascent) - var(--this-descent)) * 1em) / 2);
+    font: 200 36px/calc(2 * 1rlh) 'Raleway';
+    font: 200 calc(1.64 * 1rem)/calc(2 * 1rlh) 'Raleway';
+    margin: 1rlh 0;
 }
-p + p { text-indent: 32px }       /* 32 */
-ul { padding-left: 32px }
+p + p { text-indent: 1rlh }
+ul { padding-left: 1rlh }
 dt {
-    position: relative; top: 1px;
+    --this-ascent:  var(--raleway-ascent);
+    --this-descent: var(--raleway-descent);
+    /* FIXME: Too convoluted? */
+    position: relative; top: calc((1rlh
+               + (var(--root-ascent) - var(--root-descent)) * 1rem
+               - 1lh
+               - (var(--this-ascent) - var(--this-descent)) * 1em) / 2);
     font-family: 'Raleway';
     text-align: left;
 }
 dd {
-    margin: 0 32px;
+    margin: 0 1rlh;
     text-align: left;
 }
-dt { margin-top: 32px; }          /* line-height */
+dt { margin-top: 1rlh; }
 time {
     float: right;
-    padding-left: 32px;           /* line-height */
+    padding-left: 1rlh;
 }
 b { font-weight: inherit }
 a { text-decoration: none }
+li::marker { line-height: inherit; font: inherit }
 a:hover { text-decoration: underline }
 figure.me {
     float: right;
-    margin: 64px 0 32px 48px;
+    margin: 1rlh 0 1rlh calc(1.5 * 1rlh);
     max-width: 100%;
     & img {
-        position: relative; top: -7px;
+        position: relative; top: calc(
+            (1rem * (var(--root-ascent) - var(--root-descent)) - 1rlh) / 2
+        );
         /* Image height is set to 352 (11 × line-height) in the HTML. */
         max-width: 100%;
         display: block;
         height: auto; /* keep image aspect when scaling down */
     }
     & figcaption {
-        position: relative; top: 1px;
+        --this-ascent:  var(--raleway-ascent);
+        --this-descent: var(--raleway-descent);
+        /* FIXME: Too convoluted? */
+        position: relative; top: calc((1rlh
+                   + (var(--root-ascent) - var(--root-descent)) * 1rem
+                   - 1lh
+                   - (var(--this-ascent) - var(--this-descent)) * 1em) / 2);
         font-family: 'Raleway';
         text-align: right;
     }
 }
 footer {
-    margin: 32px;                 /* 2 × 32px */
+    margin: 1rlh;
     text-align: center;
 }
 /** Print style **/
@@ -113,12 +149,20 @@ footer {
     @page { margin: 25mm 25mm 25mm 25mm }
     * { background: #0000 !important; color: #000 !important }
     html {
-        font-size: 11pt;          /* font-size */
-        line-height: 16pt;        /* line-height */
+        font-size: 11pt;
+        line-height: 16pt;
         &.DEBUG {
             background:
-                linear-gradient(#888 0 1pt, #0000 1pt 16pt) 0 3.75pt / 100% 16pt
+                linear-gradient(#4088 0 1px, #0000 1px 1lh) 0 3.75pt / 100% 1lh
                 !important;
+
+            /* background-attachment: fixed; */
+            --baseline: calc((1lh + (var(--ascent) - var(--descent)) * 1em) / 2);
+            background:
+                linear-gradient(#4088 0 1px, #0000 1px 1lh) 0 var(--baseline) / 100% 1lh
+                !important;
+
+            border: 1px solid #4088; box-decoration-break: clone;
         }
     }
     main { max-width: none }
@@ -131,35 +175,14 @@ footer {
         page-break-before: avoid;
         text-align: justify;
     }
-    h1 {
-        font-size: 24pt;
-        font-weight: 200;         /* +100 boldness */
-        line-height: 48pt;        /* 3 line-height */
-        top: 20.5pt;
-    }
-    h2 {
-        top: 7pt;
-        font-size: 16pt;
-        font-weight: 300;         /* +100 boldness */
-        line-height: 32pt;        /* 2 line-height */
-        margin: 16pt 0;           /* line-height */
-    }
-    p + p { text-indent: 16pt }   /* line-height */
-    dt {
-        font-weight: 400;         /* +100 boldness */
-        margin-top: 16pt;         /* line-height */
-    }
-    dd { margin: 0 16pt }         /* 0 / line-height */
-    time { padding-left: 24pt }   /* line-height */
+    h1 { font-weight: 200 }  /* +100 boldness */
+    h2 { font-weight: 300 }  /* +100 boldness */
+    dt { font-weight: 400 }  /* +100 boldness */
     figure.me {
         font-weight: 400;
-        margin: 48pt 0 24pt 24pt; /*  2×line-height / 0 / line-height / line-height */
         & img {
-            top: -11pt;
-            width: calc(32px * 8 * (4 / 5)); /* image HEIGHT: 8 × line-height */
+            width: calc(1rlh * 12 * (4 / 5)); /* image HEIGHT: 12 × line-height */
         }
-        & figcaption { position: relative; top: -7pt }
-        & figcaption div { margin: 8pt 0 }  /* 0.5 line-height */
     }
     footer { display: none }
 }
