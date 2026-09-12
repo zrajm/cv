@@ -58,7 +58,7 @@ html {
 body {
     padding: 0 calc(1rlh / 2);
     margin: 0 auto;
-    max-width: calc(28 * 1rlh);
+    max-width: 28rlh;
     text-align: justify;
 }
 h1, h2 {
@@ -121,8 +121,10 @@ li::marker { line-height: inherit; font: inherit }
 a:hover { text-decoration: underline }
 figure.me {
     float: right;
-    margin: 1rlh 0 1rlh calc(1.5 * 1rlh);
+    margin: 1rlh 0 1rlh 1.5rlh;
+    @media ( max-width: 35rlh) { float: none; margin: 2rlh auto 0 }
     max-width: 100%;
+    width: fit-content;
     & img {
         --image-height: 14rlh;
         position: relative; top: calc(
@@ -133,7 +135,6 @@ figure.me {
         display: block;
         height: auto; /* keep image aspect when scaling down */
         width: calc(var(--image-height) * (4 / 5)); /* image height * aspect */
-        margin-left: auto;
     }
     & figcaption {
         --this-ascent:  var(--raleway-ascent);

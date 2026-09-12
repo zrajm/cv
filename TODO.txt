@@ -77,6 +77,8 @@
   https://developer.chrome.com/blog/font-fallbacks
 * TODO Find other jobs that aren't included
 * FINISHED
+** DONE Center image on small screens
+   CLOSED: [2026-09-12 Sat 22:27]
 ** DONE Klingonska ad posters
    CLOSED: [2026-04-04 Sat 01:01]
 ** DONE Klingonska radio spot
