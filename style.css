@@ -38,7 +38,7 @@ html {
     background: #000;
     &.DEBUG {
         background:
-            repeating-linear-gradient(#808e 0 1px, #0000 1px 32px) 0 24px,
+            linear-gradient(#808e 0 1px, #0000 1px 32px) 0 24px / 100% 32px,
             #000;
     }
     color: #888;
@@ -117,7 +117,7 @@ footer {
         line-height: 16pt;        /* line-height */
         &.DEBUG {
             background:
-                repeating-linear-gradient(#888 0 1pt, #0000 1pt 16pt) 0 3.75pt
+                linear-gradient(#888 0 1pt, #0000 1pt 16pt) 0 3.75pt / 100% 16pt
                 !important;
         }
     }
