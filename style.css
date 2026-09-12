@@ -37,24 +37,28 @@ html { box-sizing: border-box }
 *, :before, :after { box-sizing: inherit; padding: 0; margin: 0; text-indent: 0 }
 /** Page style **/
 html {
-    background: #000;
+    background-color: #000;
+    --root-font-size: 22px;
+    --root-line-height: 32px;
     --ascent:  var(--roboto-ascent);
     --descent: var(--roboto-descent);
     --root-ascent:  var(--roboto-ascent);
     --root-descent: var(--roboto-descent);
-    &.DEBUG {
+    &.DEBUG main {
         --baseline: calc((1lh + (var(--ascent) - var(--descent)) * 1em) / 2);
         background:
             linear-gradient(#808e 0 1px, #0000 1px 1lh) 0 var(--baseline) / 100% 1lh,
+            linear-gradient(90deg, #8087 0 1px, #0000 1px 1lh) 0 var(--baseline) / 1lh 100%,
             #000;
+        outline: 1px solid #808e; outline-offset: -1px;
     }
     color: #888;
-    font: 300 22px/32px 'Roboto';
+    font: 300 var(--root-font-size)/var(--root-line-height) 'Roboto';
 }
-body { padding: 0 calc(1rlh / 2) }
-main {
+body {
+    padding: 0 calc(1rlh / 2);
     margin: 0 auto;
-    max-width: 896px;             /* 30 line-height (30-35em is ideal; ~60char) */
+    max-width: calc(28 * 1rlh);
     text-align: justify;
 }
 h1, h2 {
@@ -120,6 +124,7 @@ figure.me {
     margin: 1rlh 0 1rlh calc(1.5 * 1rlh);
     max-width: 100%;
     & img {
+        --image-height: 14rlh;
         position: relative; top: calc(
             (1rem * (var(--root-ascent) - var(--root-descent)) - 1rlh) / 2
         );
@@ -127,6 +132,8 @@ figure.me {
         max-width: 100%;
         display: block;
         height: auto; /* keep image aspect when scaling down */
+        width: calc(var(--image-height) * (4 / 5)); /* image height * aspect */
+        margin-left: auto;
     }
     & figcaption {
         --this-ascent:  var(--raleway-ascent);
@@ -149,13 +156,9 @@ footer {
     @page { margin: 25mm 25mm 25mm 25mm }
     * { background: #0000 !important; color: #000 !important }
     html {
-        font-size: 11pt;
-        line-height: 16pt;
+        --root-font-size: 11pt;
+        --root-line-height: 16pt;
         &.DEBUG {
-            background:
-                linear-gradient(#4088 0 1px, #0000 1px 1lh) 0 3.75pt / 100% 1lh
-                !important;
-
             /* background-attachment: fixed; */
             --baseline: calc((1lh + (var(--ascent) - var(--descent)) * 1em) / 2);
             background:
@@ -180,9 +183,7 @@ footer {
     dt { font-weight: 400 }  /* +100 boldness */
     figure.me {
         font-weight: 400;
-        & img {
-            width: calc(1rlh * 12 * (4 / 5)); /* image HEIGHT: 12 × line-height */
-        }
+        & img { --image-height: 12rlh }
     }
     footer { display: none }
 }
