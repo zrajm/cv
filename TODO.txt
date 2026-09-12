@@ -1,6 +1,6 @@
 -*- org -*-
 
-* [9/12] Implement Anastasiya's requested changes (in Swedish)
+* [10/12] Implement Anastasiya's requested changes (in Swedish)
   Ronik Anastasiya <anastasiya.ronik@uppsala.se> requested the following.
 ** DONE Ta bort gatuadress                                               :CV:
    CLOSED: [2026-09-10 Thu 19:50]xxx
@@ -45,7 +45,8 @@
    Du har en bra grund för ditt personliga brev, med återberättande av
    relevanta erfarenheter. Lägg in texten i ett dokument med samma format och
    typsnitt som ditt CV.
-** TODO Beskriv arbeten/utbildningar/engagemang mer lika                 :CV:
+** DONE Beskriv arbeten/utbildningar/engagemang mer lika                 :CV:
+   CLOSED: [2026-09-12 Sat 21:53]
    Ordna gärna så att beskrivningar för arbeten/ utbildningar/ engagemang är
    formulerade på liknande sätt. Du kan med fördel göra liknande format som
    "Konstruktion, författande, formgivning och underhåll av webbsida relaterad

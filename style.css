@@ -164,7 +164,6 @@ footer {
             background:
                 linear-gradient(#4088 0 1px, #0000 1px 1lh) 0 var(--baseline) / 100% 1lh
                 !important;
-
             border: 1px solid #4088; box-decoration-break: clone;
         }
     }
